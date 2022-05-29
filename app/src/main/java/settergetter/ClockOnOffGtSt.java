@@ -26,7 +26,7 @@ public class ClockOnOffGtSt {
             long diff = date2.getTime() - date1.getTime();
             long diffMinutes = diff / (60 * 1000) % 60;
             long diffHours = diff / (60 * 60 * 1000) % 24;
-            setTotalTime(""+diffHours+":"+diffMinutes);
+            setTotalTime(""+diffHours+" Hrs, "+diffMinutes+" Mins.");
         }
         catch (Exception e){
             e.printStackTrace();

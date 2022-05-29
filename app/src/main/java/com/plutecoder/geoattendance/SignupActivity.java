@@ -143,7 +143,7 @@ public class SignupActivity extends AppCompatActivity {
                             public void onTimeSet(TimePicker view, int hourOfDay,
                                                   int minute) {
                                 strendtime = hourOfDay + ":" + minute;
-                                txtendtime.setText("Start Time :" + hourOfDay + ":" + minute);
+                                txtendtime.setText("End Time :" + hourOfDay + ":" + minute);
                             }
                         }, mHour, mMinute, false);
                 timePickerDialog.show();
