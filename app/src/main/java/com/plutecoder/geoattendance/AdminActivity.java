@@ -59,6 +59,9 @@ public class AdminActivity extends AppCompatActivity {
     ArrayList<StaffGtSt> friendlist;
     private GridLayoutManager lLayout;
 
+    private StaffGtSt userGtSt;
+
+
     // private RecyclerView recyclerView;
     int check = 0;
 
@@ -228,7 +231,7 @@ public class AdminActivity extends AppCompatActivity {
         @SuppressLint("ResourceAsColor")
         @Override
         public void onBindViewHolder(RecyclerViewHoldershor holder, final int position) {
-            final StaffGtSt userGtSt = itemList.get(position);
+            userGtSt = itemList.get(position);
 
             holder.staffname.setText(userGtSt.getName());
             holder.designamtion.setText(userGtSt.getDesignation());

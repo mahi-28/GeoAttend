@@ -1,5 +1,8 @@
 package settergetter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ClockOnOffGtSt {
 
     public String date;
@@ -9,8 +12,34 @@ public class ClockOnOffGtSt {
     public boolean isonleave;
     public boolean isclockonforday;
     public boolean isclockoffforday;
+    public String totalTime;
 
 
+
+    public void calculateTotalTime() {
+        String inTime1 = this.intime+":00";
+        String outTime1 = this.outtime+":00";
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+            Date date1 = format.parse(inTime1);
+            Date date2 = format.parse(outTime1);
+            long diff = date2.getTime() - date1.getTime();
+            long diffMinutes = diff / (60 * 1000) % 60;
+            long diffHours = diff / (60 * 60 * 1000) % 24;
+            setTotalTime(""+diffHours+":"+diffMinutes);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void setTotalTime(String totalTime) {
+        this.totalTime = totalTime;
+    }
+
+    public String getTotalTime() {
+        return totalTime;
+    }
 
     public boolean isIsclockonforday() {
         return isclockonforday;

@@ -305,7 +305,7 @@ try {
         @Override
         public void onBindViewHolder(RecyclerViewHoldershor holder, final int position) {
             ClockOnOffGtSt userGtSt=itemList.get(position);
-
+            userGtSt.calculateTotalTime();
 //            holder.teachername.setText(userGtSt.getName());
 //            holder.subjectname.setText(userGtSt.getUsername());
 //            holder.descr.setText(userGtSt.getPin());
@@ -329,6 +329,7 @@ try {
                 holder.textViewDate.setText(userGtSt.getDate());
                 holder.tvintime.setText(userGtSt.getIntime());
                 holder.tvapprovedouttime.setText(userGtSt.getOuttime());
+                holder.tvTotaltime.setText(userGtSt.getTotalTime());
             }
 
 
@@ -349,7 +350,7 @@ try {
 
     public class RecyclerViewHoldershor extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public TextView textViewDate, tvintime, tvapprovedouttime;
+        public TextView textViewDate, tvintime, tvapprovedouttime,tvTotaltime;
         // public ImageView countryPhoto;
         LinearLayout row;
         public RecyclerViewHoldershor(View itemView) {
@@ -358,6 +359,8 @@ try {
             textViewDate = (TextView) itemView.findViewById(R.id.textViewDate);
             tvintime = (TextView) itemView.findViewById(R.id.tvintime);
             tvapprovedouttime = (TextView) itemView.findViewById(R.id.tvapprovedouttime);
+            tvTotaltime = (TextView) itemView.findViewById(R.id.tvapprovedTotaltime);
+
             row=itemView.findViewById(R.id.row);
 
         }
