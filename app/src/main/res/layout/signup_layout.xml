@@ -84,7 +84,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="10"
                     android:drawablePadding="09dp"
-                    android:hint="Display Name"
+                    android:hint="Full Name"
                     android:inputType="textCapSentences"
                     android:maxLength="50"
                     android:padding="8dp"
@@ -204,7 +204,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="10"
                     android:drawablePadding="09dp"
-                    android:hint="Start Time"
+                    android:hint="End Time"
                     android:padding="8dp"
                     android:gravity="start|center"
 
